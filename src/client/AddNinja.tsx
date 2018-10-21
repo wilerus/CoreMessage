@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { NinjaState } from './App';
+import { InputType } from 'zlib';
 
-class AddNinja extends Component {
-  state = {
+class AddNinja extends React.Component {
+  state: NinjaState = {
     name: null,
     age: null,
-    belt: null
+    belt: null,
+    id: null
   };
 
-  handleChange = e => {
+  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
       [e.target.id]: e.target.value
     });
   };
 
-  handleSubmit = e => e.preventDefault();
+  handleSubmit = (e: React.ChangeEvent) => e.preventDefault();
 
   render() {
     return (

@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react';
+import { HelloProps } from './App';
 
-const Ninjas = ({ ninjas }) => {
+const Ninjas = (ninjas: HelloProps) => {
   return (
     <div className="ninja-list">
-      {ninjas.map(ninja => (
+      {ninjas.ninjas.map(ninja => (
         <div className="ninja" key={ninja.id}>
           <div>Name: Ryu</div>
           <div>Age: 30</div>
